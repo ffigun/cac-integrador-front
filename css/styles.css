@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html {
+    /* Uso este padding para contrarrestar la altura del navbar que esta fixed-top */
+    scroll-padding-top: 5rem;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -15,25 +20,20 @@ body {
     background-color: #353A40 !important;
 }
 
+/* .navbar {height: 4rem;} */
+
 .navbar-dark .navbar-nav .nav-link.color-verde {
     color: green;
 }
 
-.navbar-pad {
-    padding: 0 5% 0 5%;
+.logo-navbar {
+    width: 4rem;
+    object-fit: cover;
 }
 
-@media (min-width: 768px) {
-    .navbar-pad {
-        padding: 0 5% 0 5%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .navbar-pad {
-        padding: 0 10% 0 10%;
-    }
-}
+.navbar-pad {padding: 0 5% 0 5%;}
+@media (min-width: 768px)   {.navbar-pad {padding: 0 5% 0 5%;}}
+@media (min-width: 1200px)  {.navbar-pad {padding: 0 10% 0 10%;}}
 
 .texto-superindice {
     vertical-align: super;
@@ -65,32 +65,22 @@ body {
     z-index: 20;
 }
 
-@media (min-width: 768px) {
-    .carousel-caption {
-        inset: 25% 5% 0 30%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .carousel-caption {
-        inset: 30% 5% 0 60%;
-    }
-}
+@media (min-width: 768px)   {.carousel-caption {inset: 25% 5% 0 30%;}}
+@media (min-width: 1200px)  {.carousel-caption {inset: 30% 5% 0 60%;}}
 
 .imagen-card {
     border-radius: 0.25rem 0.25rem 0 0;
     object-fit: cover;
 }
 
-.btn-transparente {
+.btn-enviar {
     color: #fff;
-    background-color: transparent;
-    border-color: #fff;
+    background-color: #96C93E;
 }
 
-.btn-transparente:hover {
-    color: #ccc;
-    border-color: #ccc;
+.btn-enviar:hover {
+    color: #fff;
+    background-color: #72a120;
 }
 
 .btn-verde {
@@ -104,31 +94,34 @@ body {
     border-color: #1a9b36;
 }
 
-.btn-enviar {
+.btn-transparente {
     color: #fff;
-    background-color: #96C93E;
+    background-color: transparent;
+    border-color: #fff;
 }
 
-.btn-enviar:hover {
-    color: #fff;
-    background-color: #72a120;
+.btn-transparente:hover {
+    color: #ccc;
+    border-color: #ccc;
 }
 
-.btn-enviar:focus, .btn-comprar:focus {
-    box-shadow: 0 0 0 0.25rem rgba(98, 172, 28, 0.25);
-}
-
-.btn-transparente:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
-}
+.btn-enviar:focus       {box-shadow: 0 0 0 0.25rem rgba(166, 255, 82, 0.25);}
+.btn-verde:focus        {box-shadow: 0 0 0 0.25rem rgba(98, 172, 28, 0.25);}
+.btn-transparente:focus {box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);}
 
 #lugarFecha img {
     object-fit: cover;
 }
 
-.texto-gris {
-    color: #6B7880;
-}
+.mapa {height: 50vw;}
+@media (min-width: 768px)   {.mapa {height: 35vw;}}
+@media (min-width: 1200px)  {.mapa {height: 25vw;}}
+
+.ads {height: 40vw;}
+@media (min-width: 768px)   {.ads {height: 25vw;}}
+@media (min-width: 1200px)  {.ads {height: 20vw;}}
+
+.texto-gris {color: #6B7880;}
 
 footer .container-fluid {
     background: rgb(28,54,67);
