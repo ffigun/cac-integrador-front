@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto integrador Front | Fernando Figun</title>
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid navbar-pad">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/img/codoacodo.png" class="logo-navbar" alt="logo de codo a codo 4.0" loading="lazy">
+          Conf Bs As
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto w-100 justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html#conferencia">La conferencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#oradores">Los oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#lugar-fecha">El lugar y la fecha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#formulario-orador">Conviértete en orador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color-verde" href="#">Comprar tickets</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>    
+  </header>
+  <main>
+    <section id="descuentos">
+      <div class="container container-small my-4">
+        <div class="row row-cols-1 row-cols-md-3 g-3 text-center justify-content-center">
+          <div class="col">
+            <div class="card py-2 rounded-0 border-2 border-estudiante">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Estudiante</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-text fw-bold">80%</p>
+                <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card py-2 rounded-0 border-2 border-trainee">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Trainee</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-text fw-bold">50%</p>
+                <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card py-2 rounded-0 border-2 border-junior">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Junior</h5>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-text fw-bold">15%</p>
+                <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="venta">
+      <div class="text-center">
+        <h2 class="fs-6">
+          <div class="pb-3">VENTA</div>
+          <div class="fs-3 pb-3">VALOR DE TICKET $200</div>
+        </h2>
+      </div>
+      
+      <div class="container container-small">
+        <form>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <input id="nombre" class="form-control" type="text" placeholder="Nombre">
+            </div>
+            <div class="col-12 col-md-6">
+              <input id="apellido" class="form-control" type="text" placeholder="Apellido">
+            </div>
+            <div class="col-12">
+              <input id="mail" class="form-control" type="email" placeholder="Correo">
+            </div>
+            <div class="col-12 col-md-6 justify-content-start text-start">
+              <label for="cantidad" class="form-label">Cantidad</label>
+              <input id="cantidad" class="form-control" type="text" placeholder="Cantidad">
+            </div>
+            <div class="col-12 col-md-6 justify-content-start text-start">
+              <label for="categoria" class="form-label">Categoría</label>
+              <select id="categoria" class="form-select">
+                <option selected>Estudiante</option>
+                <option>Trainee</option>
+                <option>Junior</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <input class="form-control color-total-a-pagar p-3" value="Total a pagar: $" type="text" disabled readonly>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn w-100 btn-verde-comprar-tickets me-2">Borrar</button>
+              <button class="btn w-100 btn-verde-comprar-tickets ms-2" type="submit">Resumen</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+      <div class="container-fluid mt-4">
+        <div class="row justify-content-center text-center py-2">
+          <div class="col-12 col-md-3 col-xl-1 my-1 py-1 mx-2"><a class="enlace-menu" href="./404.html">Preguntas frecuentes</a></div>
+          <div class="col-12 col-md-3 col-xl-1 my-1 py-1 mx-2"><a class="enlace-menu" href="./404.html">Contáctanos</a></div>
+          <div class="col-12 col-md-3 col-xl-1 my-1 py-1 mx-2"><a class="enlace-menu" href="./404.html">Prensa</a></div>
+          <div class="col-12 col-md-3 col-xl-1 my-1 py-1 mx-2"><a class="enlace-menu" href="./404.html">Conferencias</a></div>
+          <div class="col-12 col-md-3 col-xl-1 my-1 py-1 mx-2"><a class="enlace-menu" href="./404.html">Términos y condiciones</a></div>
+          <div class="col-12 col-md-3 col-xl-1 my-1 py-1 mx-2"><a class="enlace-menu" href="./404.html">Privacidad</a></div>
+          <div class="col-12 col-md-3 col-xl-1 my-1 py-1 mx-2"><a class="enlace-menu" href="./404.html">Estudiantes</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/bootstrap.bundle.min.js"></script>  
+  </body>
+ </html>

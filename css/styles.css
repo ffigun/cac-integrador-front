@@ -6,8 +6,24 @@
     box-sizing: border-box;
 }
 
+/*
+Usando flex y un minimo de 100% del viewport height en el main se puede hacer que el contenido ocupe
+todo el espacio entre el header y el footer y permita que el footer se quede al fondo de la pagina
+*/
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Uso este padding para contrarrestar la altura del navbar que esta fixed-top */
 html {
-    /* Uso este padding para contrarrestar la altura del navbar que esta fixed-top */
     scroll-padding-top: 5rem;
 }
 
@@ -15,12 +31,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Se requiere !important porque la clase bg-dark es !important en el css de bootstrap */
 .bg-dark {
-    /* Se requiere !important porque la clase bg-dark es !important en el css de bootstrap */
     background-color: #353A40 !important;
 }
-
-/* .navbar {height: 4rem;} */
 
 .navbar-dark .navbar-nav .nav-link.color-verde {
     color: green;
@@ -94,6 +108,15 @@ body {
     border-color: #1a9b36;
 }
 
+.btn-verde-comprar-tickets {
+    background-color: #97C93E;
+    color: #ffffff;
+}
+
+.btn-verde-comprar-tickets:hover {
+    background-color: #83b330;
+}
+
 .btn-transparente {
     color: #fff;
     background-color: transparent;
@@ -140,3 +163,40 @@ footer .container-fluid {
 .enlace-menu:hover {
     color: #81bfce;
 }
+
+.border-estudiante {
+    border-color: #007BFF;
+}
+
+.border-trainee {
+    border-color: #17A2B8;
+}
+
+.border-junior {
+    border-color: #FFC107;
+}
+
+.color-total-a-pagar {
+    color: #0040A5;
+    background-color: #CCE5FF !important;
+    border-color: #B8DAFF;
+}
+
+#descuentos .card {
+    user-select: none;
+}
+
+#descuentos .card:hover {
+    animation: crescendo 0.6s alternate infinite ease-in;
+}
+  
+@keyframes crescendo {
+    0%   {transform: scale(1);}
+    100% {transform: scale(1.05);}
+}
+
+/* Ya que el container de bootstrap es demasiado grande para desktops, creo uno mas chico y responsive */
+.container-small {max-width: 100%;}
+@media (min-width: 768px)  {.container-small {width: 600px;}}
+@media (min-width: 992px)  {.container-small {width: 650px;}} 
+@media (min-width: 1200px) {.container-small {width: 700px;}}
