@@ -87,34 +87,15 @@ body {
     object-fit: cover;
 }
 
-.btn-enviar {
+.btn-verde {
     color: #fff;
     background-color: #96C93E;
 }
 
-.btn-enviar:hover {
-    color: #fff;
-    background-color: #72a120;
-}
-
-.btn-verde {
+.btn-verde-oscuro {
     color: #fff;
     background-color: #29A744;
     border-color: #29A744;
-}
-
-.btn-verde:hover {
-    color: #0d4619;
-    border-color: #1a9b36;
-}
-
-.btn-verde-comprar-tickets {
-    background-color: #97C93E;
-    color: #ffffff;
-}
-
-.btn-verde-comprar-tickets:hover {
-    background-color: #83b330;
 }
 
 .btn-transparente {
@@ -123,14 +104,25 @@ body {
     border-color: #fff;
 }
 
+.btn-verde:hover {
+    color: #fff;
+    background-color: #72a120;
+}
+
+.btn-verde-oscuro:hover {
+    color: #0d4619;
+    border-color: #1a9b36;
+}
+
 .btn-transparente:hover {
     color: #ccc;
     border-color: #ccc;
 }
 
-.btn-enviar:focus       {box-shadow: 0 0 0 0.25rem rgba(166, 255, 82, 0.25);}
-.btn-verde:focus        {box-shadow: 0 0 0 0.25rem rgba(98, 172, 28, 0.25);}
+.btn-verde:focus        {box-shadow: 0 0 0 0.25rem rgba(166, 255, 82, 0.25);}
+.btn-verde-oscuro:focus {box-shadow: 0 0 0 0.25rem rgba(98, 172, 28, 0.25);}
 .btn-transparente:focus {box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);}
+
 
 #lugarFecha img {
     object-fit: cover;
@@ -144,7 +136,9 @@ body {
 @media (min-width: 768px)   {.ads {height: 25vw;}}
 @media (min-width: 1200px)  {.ads {height: 20vw;}}
 
-.texto-gris {color: #6B7880;}
+.texto-gris {
+    color: #6B7880;
+}
 
 footer .container-fluid {
     background: rgb(28,54,67);
@@ -160,32 +154,20 @@ footer .container-fluid {
     justify-content: center;
 }
 
-.enlace-menu:hover {
+.enlace-menu:hover  {
     color: #81bfce;
 }
 
-.border-estudiante {
-    border-color: #007BFF;
-}
+.border-estudiante  {border-color: #007BFF;}
+.border-trainee     {border-color: #17A2B8;}
+.border-junior      {border-color: #FFC107;}
 
-.border-trainee {
-    border-color: #17A2B8;
-}
-
-.border-junior {
-    border-color: #FFC107;
-}
-
-.color-total-a-pagar {
-    color: #0040A5;
-    background-color: #CCE5FF !important;
-    border-color: #B8DAFF;
-}
-
+/* Para que no se cambie el cursor para seleccionar texto */
 #descuentos .card {
     user-select: none;
 }
 
+/* Animacion */
 #descuentos .card:hover {
     animation: crescendo 0.6s alternate infinite ease-in;
 }
