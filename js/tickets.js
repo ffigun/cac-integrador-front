@@ -1,9 +1,11 @@
+// Valores y descuentos
 const valorTicket       = 200;
 
 let descuentoEstudiante = 80;
 let descuentoTrainee    = 50;
 let descuentoJunior     = 15;
 
+// Elementos del formulario
 let nombre      = document.getElementById('nombre');
 let apellido    = document.getElementById('apellido');
 let mail        = document.getElementById('mail');
@@ -13,8 +15,6 @@ let categoria   = document.getElementById('categoria');
 let btnBorrar   = document.getElementById('borrar');
 let btnResumen  = document.getElementById('resumen');
 let total       = document.getElementById('total');
-
-let formulario  = document.getElementById('formulario');
 
 // Para quitar el recuadro y aviso de error de todos los campos del formulario
 const limpiarError = () => {
@@ -34,6 +34,10 @@ const limpiarCampos = () => {
             listaNodos[i].selectedIndex = 0;
         }
     }
+}
+
+// Para vaciar el total, util si ya hay un total mostrado, ingresa un campo invalido y vuelve a calcular
+const limpiarTotal = () => {
     total.innerHTML = '';
 }
 
@@ -41,11 +45,14 @@ const limpiarCampos = () => {
 const borrar = () => {
     limpiarError();
     limpiarCampos();
+    limpiarTotal();
+
     document.activeElement.blur();
 }
 
 // Limpia errores, valida campos y muestra el precio total
 const calcularTotal = () => {
+    limpiarTotal();
     limpiarError();
 
     if (nombre.value === '') {
